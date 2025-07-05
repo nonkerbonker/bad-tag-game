@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Tag Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="home-screen">
+    <h1>🏷️ Online Tag Game</h1>
+    <input type="text" id="game-code-input" placeholder="Enter game code" maxlength="6" />
+    <button onclick="joinGame()">Join Game</button>
+    <p>or</p>
+    <button onclick="createGame()">Create Game</button>
+  </div>
+
+  <div class="container" id="game-screen" style="display: none;">
+    <h2>Game Code: <span id="game-code-display"></span></h2>
+    <p id="your-id"></p>
+    <ul id="player-list"></ul>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCj7V8_DVptG2T1NFp4YZRPB5uRSD-SBWI",
+      authDomain: "tag-game-f1e6c.firebaseapp.com",
+      projectId: "tag-game-f1e6c",
+      storageBucket: "tag-game-f1e6c.firebasestorage.app",
+      messagingSenderId: "824551279091",
+      appId: "1:824551279091:web:dcc76131a47e9ebcc7ea86",
+      measurementId: "G-DXH5YZYF84"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
